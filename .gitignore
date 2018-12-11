@@ -9,4 +9,5 @@ static/admin/*.bundle.*
 .DS_Store
 yarn-error.log
 
+# IDEA
 .idea/workspace.xml
