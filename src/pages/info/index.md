@@ -21,19 +21,17 @@ main:
     alt: image 1 alt
     image: /img/coffee.png
 full_image: /img/coffee.png
-pricing:
-  heading: Monthly subscriptions
+bucket:
+  heading: Things heading
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
+    Things description
+  things:
+    - description: A thing description.
+      name: one
+      lines:
+        - thing item 1
+        - thing item 2
+        - thing item 3
+      value: '50'
 ---
 

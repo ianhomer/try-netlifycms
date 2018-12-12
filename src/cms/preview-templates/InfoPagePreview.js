@@ -6,8 +6,8 @@ const InfoPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
+  const entryBucketThings = entry.getIn(['data', 'bucket', 'things'])
+  const bucketThings = entryBucketThings ? entryBucketThings.toJS() : []
 
   return (
     <InfoPageTemplate
@@ -25,10 +25,10 @@ const InfoPagePreview = ({ entry, getAsset }) => {
         },
       }}
       fullImage={entry.getIn(['data', 'full_image'])}
-      pricing={{
-        heading: entry.getIn(['data', 'pricing', 'heading']),
-        description: entry.getIn(['data', 'pricing', 'description']),
-        plans: pricingPlans,
+      bucket={{
+        heading: entry.getIn(['data', 'bucket', 'heading']),
+        description: entry.getIn(['data', 'bucket', 'description']),
+        things: bucketThings,
       }}
     />
   )

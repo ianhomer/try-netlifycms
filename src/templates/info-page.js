@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
-import Pricing from '../components/Pricing'
+import Things from '../components/Things'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const InfoPageTemplate = ({
@@ -14,7 +14,7 @@ export const InfoPageTemplate = ({
   intro,
   main,
   fullImage,
-  pricing,
+  bucket,
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -83,10 +83,10 @@ export const InfoPageTemplate = ({
                 }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
+                {bucket.heading}
               </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+              <p className="is-size-5">{bucket.description}</p>
+              <Things data={bucket.things} />
             </div>
           </div>
         </div>
@@ -109,10 +109,10 @@ InfoPageTemplate.propTypes = {
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
   }),
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
+  bucket: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    plans: PropTypes.array,
+    things: PropTypes.array,
   }),
 }
 
@@ -129,7 +129,7 @@ const InfoPage = ({ data }) => {
         intro={frontmatter.intro}
         main={frontmatter.main}
         fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
+        bucket={frontmatter.bucket}
       />
     </Layout>
   )
@@ -194,14 +194,14 @@ export const infoPageQuery = graphql`
             }
           }
         }
-        pricing {
+        bucket {
           heading
           description
-          plans {
+          things {
             description
-            items
-            plan
-            price
+            lines
+            name
+            value
           }
         }
       }
