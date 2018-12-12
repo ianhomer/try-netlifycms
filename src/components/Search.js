@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Index } from "elasticlunr";
+import { Link } from "gatsby"
 
 // Search component
 export default class Search extends Component {
@@ -22,7 +23,7 @@ export default class Search extends Component {
                 <ul>
                     {this.state.results.map(page => (
                         <li key={page.id}>
-                            <a href={"/" + page.path}>{page.title}</a>
+                            <Link href={"/" + page.slug}>{page.title}</Link>
                             {": " + page.tags.join(`,`)}
                         </li>
                     ))}
@@ -43,7 +44,7 @@ export default class Search extends Component {
             query,
             // Query the index with search string to get an [] of IDs
             results: this.index
-                .search(query, {})
+                .search(query, { expand: true })
                 // Map over each ID and return the full document
                 .map(({ ref }) => this.index.documentStore.getDoc(ref))
         });

@@ -65,6 +65,7 @@ module.exports = {
         fields: [
           'title',
           'tags',
+          'description'
         ],
         // How to resolve each field's value for a supported node type
         resolvers: {
