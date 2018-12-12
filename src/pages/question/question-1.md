@@ -14,7 +14,3 @@ Question 1 text
 Answer 1 text
 
 Test change
-
-Another test change
-
-![image alt text](/img/test.jpg)
