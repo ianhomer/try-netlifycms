@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
 import Navbar from '../components/Navbar'
+import Search from '../components/Search'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
@@ -14,6 +15,9 @@ const TemplateWrapper = ({ children }) => (
               title,
               description,
             }
+          }
+          siteSearchIndex {
+            index
           }
         }
     `}
@@ -37,6 +41,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
+        <Search searchIndex={data.siteSearchIndex.index}/>
         <div>{children}</div>
       </div>
     )}
