@@ -16,3 +16,5 @@ Answer 1 text
 Test change
 
 Another test change
+
+![](/img/test.jpg)
