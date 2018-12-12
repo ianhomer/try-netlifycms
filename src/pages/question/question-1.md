@@ -17,4 +17,4 @@ Test change
 
 Another test change
 
-![](/img/test.jpg)
+![image alt text](/img/test.jpg)
