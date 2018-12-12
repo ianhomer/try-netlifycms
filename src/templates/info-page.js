@@ -24,13 +24,6 @@ export const InfoPageTemplate = ({
             <div className="content">
               <div
                 className="full-width-image-container margin-top-0"
-                style={{
-                  backgroundImage: `url(${
-                    !!image.childImageSharp
-                      ? image.childImageSharp.fluid.src
-                      : image
-                  })`,
-                }}
               >
                 <h2
                   className="has-text-weight-bold is-size-1"
@@ -65,22 +58,13 @@ export const InfoPageTemplate = ({
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
+                      <article className="tile is-child"/>
                     </div>
                   </div>
                 </div>
               </div>
               <div
                 className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
                 {bucket.heading}
@@ -96,7 +80,6 @@ export const InfoPageTemplate = ({
 )
 
 InfoPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -105,10 +88,8 @@ InfoPageTemplate.propTypes = {
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    description: PropTypes.string
   }),
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   bucket: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -122,13 +103,11 @@ const InfoPage = ({ data }) => {
   return (
     <Layout>
       <InfoPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
-        fullImage={frontmatter.full_image}
         bucket={frontmatter.bucket}
       />
     </Layout>
@@ -150,24 +129,10 @@ export const infoPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         heading
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
             text
           }
           heading
@@ -176,23 +141,6 @@ export const infoPageQuery = graphql`
         main {
           heading
           description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
         bucket {
           heading

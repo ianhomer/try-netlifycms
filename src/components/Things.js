@@ -10,7 +10,7 @@ const Things = ({ data }) => (
             {thing.name}
           </h4>
           <h2 className="is-size-1 has-text-weight-bold has-text-primary has-text-centered">
-            ${thing.value}
+            {thing.value}
           </h2>
           <p className="has-text-weight-semibold">{thing.description}</p>
           <ul>
