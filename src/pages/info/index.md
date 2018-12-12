@@ -1,37 +1,24 @@
 ---
 templateKey: info-page
-title: Our Coffee
+title: Info Page
 image: /img/coffee.png
-heading: What we offer
+heading: Info page heading
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Info page description
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-  heading: What we offer
+        blurb text.
+  heading: blurb heading
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    Blurb description
 main:
-  heading: Great coffee with no compromises
+  heading: Main heading
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    Main description
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
+    alt: image 1 alt
     image: /img/coffee.png
 full_image: /img/coffee.png
 pricing:
