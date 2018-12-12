@@ -28,4 +28,4 @@ Initialise Github repository :
 
 Lunr search 
 
-    yarn add lunr gatsby-plugin-lunr-search    
+    yarn add lunr @andrew-codes/gatsby-plugin-elasticlunr-search
