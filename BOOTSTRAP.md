@@ -23,4 +23,9 @@ Initialise Github repository :
     git commit -am "First Commit"
     git remote add origin git@github.com:ianhomer/try-netlifycms.git
     git push -u origin master
-    
+
+# Add extensions
+
+Lunr search 
+
+    yarn add lunr gatsby-plugin-lunr-search    

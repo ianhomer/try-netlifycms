@@ -5922,6 +5922,11 @@ gatsby-link@^2.0.7:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-lunr-search@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-lunr-search/-/gatsby-plugin-lunr-search-1.0.1.tgz#3ff97b5c83061e86a924bbd712eb5476d0abfb32"
+  integrity sha512-YwGWQTazolVubVFUNmnW6176ScrhNyhcueESiY36D5VkuP2NGF2AlbNhmLosEWrjhlZJ3bMOrnaMkjTw7Chfiw==
+
 gatsby-plugin-netlify-cms@^3.0.0:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.9.tgz#d525774b1079e5ae9d3ea887e10e674541d75b28"
@@ -8870,6 +8875,11 @@ ltcdr@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ltcdr/-/ltcdr-2.2.1.tgz#5ab87ad1d4c1dab8e8c08bbf037ee0c1902287cf"
   integrity sha1-Wrh60dTB2rjowIu/A37gwZAih88=
+
+lunr@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.5.tgz#7b510bad57e948dfb99a71fdff00c1bf9171bdda"
+  integrity sha512-EtnfmHsHJTr3u24sito9JctSxej5Ds0SgUD2Lm+qRHyLgM7BGesFlW14eNh1mil0fV5Muh8gf3dBBXzADlUlzQ==
 
 magic-string@^0.22.4:
   version "0.22.5"
