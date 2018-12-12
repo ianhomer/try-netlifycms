@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: question
 title: Question 1 title
 date: 2016-12-18T15:04:10.000Z
 description: Question 1 description
