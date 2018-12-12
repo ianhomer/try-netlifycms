@@ -1,5 +1,5 @@
 ---
-templateKey: product-page
+templateKey: info-page
 title: Our Coffee
 image: /img/coffee.png
 heading: What we offer
