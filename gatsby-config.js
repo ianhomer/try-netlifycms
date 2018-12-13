@@ -65,7 +65,9 @@ module.exports = {
         fields: [
           'title',
           'tags',
-          'description'
+          'description',
+          'slug',
+          'html'
         ],
         // How to resolve each field's value for a supported node type
         resolvers: {
@@ -73,7 +75,7 @@ module.exports = {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
             tags: node => node.frontmatter.tags,
-            path: node => node.frontmatter.path
+            slug: node => node.fields.slug
           },
         },
       },

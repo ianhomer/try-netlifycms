@@ -23,7 +23,7 @@ export default class Search extends Component {
                 <ul>
                     {this.state.results.map(page => (
                         <li key={page.id}>
-                            <Link href={"/" + page.slug}>{page.title}</Link>
+                            <Link to={page.slug}>{page.title}</Link>
                             {": " + page.tags.join(`,`)}
                         </li>
                     ))}

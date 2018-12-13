@@ -55,24 +55,24 @@ QuestionTemplate.propTypes = {
 }
 
 const Question = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: item } = data
 
   return (
     <Layout>
       <QuestionTemplate
-        content={post.html}
+        content={item.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={item.frontmatter.description}
         helmet={
           <Helmet
             titleTemplate="%s | Question"
           >
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
+            <title>{`${item.frontmatter.title}`}</title>
+            <meta name="description" content={`${item.frontmatter.description}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        tags={item.frontmatter.tags}
+        title={item.frontmatter.title}
       />
     </Layout>
   )
