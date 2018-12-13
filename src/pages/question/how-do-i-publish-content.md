@@ -6,4 +6,4 @@ description: Changed content must be approved before it can be published.
 tags:
   - content
 ---
-Change the content and click save.  When you are OK with the content, change the status to ready and then it can be published.
+Change the content and click save.  When you are OK with the content, change the status to ready and then it can be published.   Change this content.
