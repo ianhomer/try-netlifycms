@@ -1,20 +1,25 @@
-# TL;DR
+# Try NetlifyCMS
+
+## tl;dr
 
 Build & serve
 
-    yarn run build
-    yarn run serve
+    npm install
+    npm run develop
 
-And access with http://localhost:9000/
+And access site with http://localhost:8000/
 
+Access CMS at http://localhost:8000/admin/
 
-# Rebuild
+## Rebuild
 
 After content change has been published, the local app can rebuilt with
 
     git pull
-    yarn run build
+    npm run develop
 
-# Bootstrap
+## Bootstrap
 
-See BOOTSTRAP.md for details on how this site was created using gatsby-starter-netlify-cms
+See BOOTSTRAP.md for details on how this site was created using
+gatsby-starter-netlify-cms.
+
